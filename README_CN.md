@@ -1,6 +1,6 @@
 ## 超级马里奥的Python实现
 <p align="left">
-    中文 &nbsp | &nbsp <a href="README_EN.md">English</a>
+    中文 &nbsp | &nbsp <a href="README.md">English</a>
 </p>
 <br>
 <p align="center">

@@ -1,6 +1,6 @@
 ## Python Implementation of Super Mario
 <p align="left">
-    <a href="README.md">中文</a> &nbsp | &nbsp English
+    <a href="README_CN.md">中文</a> &nbsp | &nbsp English
 </p>
 <br>
 <p align="center">
