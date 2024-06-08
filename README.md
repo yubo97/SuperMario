@@ -1,6 +1,6 @@
-## 超级马里奥的Python实现
+## Python Implementation of Super Mario
 <p align="left">
-    中文 &nbsp | &nbsp <a href="README_EN.md">English</a>
+    <a href="README.md">中文</a> &nbsp | &nbsp English
 </p>
 <br>
 <p align="center">
@@ -8,6 +8,7 @@
 <p>
 <br>
 
+### Update
+V1.0:Mario appears on the screen.
 
-### 更新日志
-V1.0：Mario出场：Mario出现在屏幕中
+

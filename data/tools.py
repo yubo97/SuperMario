@@ -18,7 +18,7 @@ def load_all_images(directory, colorkey=(255, 0, 255), accept=('.png','.jpg','.b
             graphics[name] = img
     return graphics
 
-# 整个游戏的控制类
+
 class Control:
     def __init__(self):
         pg.init()
@@ -53,18 +53,17 @@ class Control:
             elif event.type == pg.KEYUP:
                 self.keys = pg.key.get_pressed()
 
-    #功能：控制是否显示帧率
+    # 功能：控制是否显示帧率
     def toggle_show_fps(self, key):
         if key == pg.K_F5:
             self.show_fps = not self.show_fps
 
-    #
+    # 
     def update(self):
-        current_time = pg.time.get_ticks()
         # 把游戏窗口传进去，调用level1的update函数，以更新Mario
-        self.state.update(self.screen, self.keys, current_time)
+        self.state.update(self.screen)
 
-    #功能：主函数
+    # 功能：主函数
     def main(self):
         while not self.done:
             # 检测事件
