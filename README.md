@@ -1,7 +1,12 @@
 <p align="left">
-    中文 &nbsp | &nbsp<a href="README_EN.md">English</a>
+    中文 &nbsp | &nbsp <a href="README_EN.md">English</a>
 </p>
-# SuperMario
+
+<br><br>
+<p align="center">
+    <img src="main_pic.png" width="400"/>
+<p>
+
 超级马里奥的学习代码
 
 
