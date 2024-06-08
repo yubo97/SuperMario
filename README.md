@@ -7,4 +7,3 @@ Learn SuperMario
 
 ## Update
 V1.0：Mario appearance：Mario appearance screen.
-
