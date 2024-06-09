@@ -49,7 +49,7 @@ class Control:
             self.show_fps = not self.show_fps
     def update(self):
         current_time = pg.time.get_ticks()
-        self.state.update(self.screen, self.keys, current_time)
+        self.state.update(self.screen,self.keys,current_time)
 
     def main(self):
         while not self.done:

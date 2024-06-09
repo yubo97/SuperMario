@@ -26,7 +26,7 @@ class Mario(pg.sprite.Sprite):
         self.gravity = c.GRAVITY
 
     def update(self, keys,current_time):
-        self.handle_state(keys, current_time)
+        self.handle_state(keys,current_time)
         self.update_position()
         self.animation()
 
@@ -46,7 +46,7 @@ class Mario(pg.sprite.Sprite):
         elif self.state == c.WALK:
             self.walking(keys,current_time)
         elif self.state == c.JUMP:
-            self.jumping(keys, current_time)
+            self.jumping(keys,current_time)
         elif self.state == c.FALL:
             self.falling(keys, current_time)
 
@@ -125,7 +125,7 @@ class Mario(pg.sprite.Sprite):
                     self.x_vel = 0
                     self.state = c.STAND
 
-    def jumping(self, keys, current_time):
+    def jumping(self,keys,current_time):
         self.frame_index = 4
         self.gravity = c.JUMP_GRAVITY
         self.y_vel += self.gravity
@@ -153,7 +153,7 @@ class Mario(pg.sprite.Sprite):
 
     def falling(self,keys,current_time):
         self.y_vel += self.gravity
-        if self.rect.bottom > (600 - self.rect.height):
+        if self.rect.bottom > (c.SCREEN_HEIGHT - c.GROUND_HEIGHT ):
             self.state = c.WALK
             self.y_vel = 0
             self.gravity = c.GRAVITY
