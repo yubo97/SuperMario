@@ -69,9 +69,9 @@ class Mario(pg.sprite.Sprite):
             self.state = c.WALK
         else:
             self.state = c.STAND
-    
+
     # Mario行走状态
-    def walking(self, keys, current_time):
+    def walking(self,keys,current_time):
         if self.frame_index == 0:
             self.frame_index += 1
             self.walking_timer = current_time
@@ -147,7 +147,7 @@ class Mario(pg.sprite.Sprite):
         self.right_frames.append(self.get_image(130, 32, 14, 16))   # right skid
 
         for frame in self.right_frames:
-            new_image = pg.transform.flip(frame, True, False)
+            new_image = pg.transform.flip(frame,True,False)
             self.left_frames.append(new_image)
 
 
