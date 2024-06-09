@@ -9,5 +9,5 @@
 <br>
 
 ### Update
-V1.0:Mario appears on the screen.
-V2.0: Mario walking function is added.
+V1.0:Mario appears on the screen.<br>
+V2.0: Mario walking function is added.<br>
