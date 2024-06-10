@@ -24,8 +24,8 @@ pip install pygame
 ```
 
 ### :bulb: 更新日志
-V1.0：Mario出现在屏幕中<br>
-V2.0：新增Mario行走功能<br>
-V3.0：新增Mario跳跃功能<br>
-V4.0：新增背景滚动<br>
-V5.0：新增冲突检测<br>
+ - V1.0：Mario出现在屏幕中<br>
+ - V2.0：新增Mario行走功能<br>
+ - V3.0：新增Mario跳跃功能<br>
+ - V4.0：新增背景滚动<br>
+ - V5.0：新增冲突检测<br>
