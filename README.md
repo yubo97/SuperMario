@@ -8,9 +8,25 @@
 <p>
 <br>
 
-### Update
-V1.0: Mario appears on the screen.<br>
-V2.0: Mario walking function is added.<br>
-V3.0: Mario jumping function is added.<br>
-V4.0: New background scrolling.<br>
-V5.0: New Conflict Detection.<br>
+
+### :hammer_and_wrench: Install 
+
+1. Clone the repository from GitHub:
+
+```bash
+git clone https://github.com/yubo97/SuperMario.git
+cd SuperMario
+```
+
+2. Install the required dependencies:
+
+```bash
+pip install pygame
+```
+
+### :bulb:  Update
+ - V1.0: Mario appears on the screen.<br>
+ - V2.0: Mario walking function is added.<br>
+ - V3.0: Mario jumping function is added.<br>
+ - V4.0: New background scrolling.<br>
+ - V5.0: New Conflict Detection.<br>
