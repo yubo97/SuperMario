@@ -9,6 +9,10 @@
 <br>
 
 
+### :fire: Highlight
+ - 程序依赖不同的状态，比如马里奥的行走、跳跃、走路、落下状态，根据不同情况切换不同的状态。
+ - 背景滚动原理：实际上，背景图片后移而马里奥在屏幕中位置不变。
+
 ### :hammer_and_wrench: 安装使用
 1. 从GitHub上克隆项目:
 
@@ -22,6 +26,8 @@ cd SuperMario
 ```bash
 pip install pygame
 ```
+
+3. 运行 mario_level_1.py 文件
 
 ### :bulb: 更新日志
  - V1.0：Mario出现在屏幕中<br>

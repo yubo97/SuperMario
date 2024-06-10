@@ -9,6 +9,10 @@
 <br>
 
 
+### :fire: Highlight
+ - The program depends on different states, such as Mario's walking, jumping, walking and falling states, and switches between different states according to different situations.
+ - Background scrolling principle: In fact, the background image moves backward while Mario's position on the screen remains unchanged.
+
 ### :hammer_and_wrench: Install 
 
 1. Clone the repository from GitHub:
@@ -23,6 +27,8 @@ cd SuperMario
 ```bash
 pip install pygame
 ```
+
+3. Run mario_level_1.py file.
 
 ### :bulb:  Update
  - V1.0: Mario appears on the screen.<br>
