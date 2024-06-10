@@ -13,3 +13,4 @@ V1.0: Mario appears on the screen.<br>
 V2.0: Mario walking function is added.<br>
 V3.0: Mario jumping function is added.<br>
 V4.0: New background scrolling.<br>
+V5.0: New Conflict Detection.<br>
