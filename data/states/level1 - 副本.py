@@ -26,9 +26,7 @@ class Level1:
         self.camera_adjust = 0
         self.setup_ground()
         self.setup_pipes()
-        self.setup_steps()
         self.collide_group = pg.sprite.Group(self.ground_group
-                                             ,self.step_group
                                              ,self.pipe_group)
 
     def setup_pipes(self):
@@ -55,57 +53,6 @@ class Level1:
                                             self.ground_rect3,
                                             self.ground_rect4)
 
-    def setup_steps(self):
-        """Create collideable rects for all the steps"""
-
-        self.step1 = collider.Collider(5745, 495, 40, 44)
-        self.step2 = collider.Collider(5788, 452, 40, 44)
-        self.step3 = collider.Collider(5831, 409, 40, 44)
-        self.step4 = collider.Collider(5874, 366, 40, 176)
-
-        self.step5 = collider.Collider(6001, 366, 40, 176)
-        self.step6 = collider.Collider(6044, 408, 40, 40)
-        self.step7 = collider.Collider(6087, 452, 40, 40)
-        self.step8 = collider.Collider(6130, 495, 40, 40)
-
-        self.step9 = collider.Collider(6345, 495, 40, 40)
-        self.step10 = collider.Collider(6388, 452, 40, 40)
-        self.step11 = collider.Collider(6431, 409, 40, 40)
-        self.step12 = collider.Collider(6474, 366, 40, 40)
-        self.step13 = collider.Collider(6517, 366, 40, 176)
-
-        self.step14 = collider.Collider(6644, 366, 40, 176)
-        self.step15 = collider.Collider(6687, 408, 40, 40)
-        self.step16 = collider.Collider(6728, 452, 40, 40)
-        self.step17 = collider.Collider(6771, 495, 40, 40)
-
-        self.step18 = collider.Collider(7760, 495, 40, 40)
-        self.step19 = collider.Collider(7803, 452, 40, 40)
-        self.step20 = collider.Collider(7845, 409, 40, 40)
-        self.step21 = collider.Collider(7888, 366, 40, 40)
-        self.step22 = collider.Collider(7931, 323, 40, 40)
-        self.step23 = collider.Collider(7974, 280, 40, 40)
-        self.step24 = collider.Collider(8017, 237, 40, 40)
-        self.step25 = collider.Collider(8060, 194, 40, 40)
-        self.step26 = collider.Collider(8103, 194, 40, 360)
-
-        self.step27 = collider.Collider(8488, 495, 40, 40)
-
-        self.step_group = pg.sprite.Group(self.step1, self.step2,
-                                          self.step3, self.step4,
-                                          self.step5, self.step6,
-                                          self.step7, self.step8,
-                                          self.step9, self.step10,
-                                          self.step11, self.step12,
-                                          self.step13, self.step14,
-                                          self.step15, self.step16,
-                                          self.step17, self.step18,
-                                          self.step19, self.step20,
-                                          self.step21, self.step22,
-                                          self.step23, self.step24,
-                                          self.step25, self.step26,
-                                          self.step27)
-
     def setup_mario_location(self):
         self.mario.rect.x = 80
         self.mario.rect.bottom = c.GROUND_HEIGHT
@@ -130,27 +77,20 @@ class Level1:
         collider = pg.sprite.spritecollideany(self.mario,self.collide_group)
         if collider:
             if self.mario.y_vel > 0:
+                print(self.mario.rect)
                 self.mario.y_vel = 0
                 self.mario.state = c.WALK
                 self.mario.rect.bottom = collider.rect.top
         else:
-            self.mario.rect.y += 1
-            if not pg.sprite.spritecollideany(self.mario,self.collide_group):
+            test_sprite = copy.copy(self.mario)
+            test_sprite.rect.y += 1
+            if not pg.sprite.spritecollideany(test_sprite,self.collide_group):
                 if self.mario.state != c.JUMP:
                     self.mario.state = c.FALL
-            self.mario.rect.y -= 1
+            test_sprite.rect.y -= 1
 
 
         self.mario.rect.x += self.mario.x_vel
-        collider = pg.sprite.spritecollideany(self.mario, self.collide_group)
-
-        if collider:
-            if self.mario.x_vel > 0:
-                self.mario.rect.right = collider.rect.left
-            else:
-                self.mario.rect.left = collider.rect.right
-
-            self.mario.x_vel = 0
 
         if self.mario.rect.y > c.SCREEN_HEIGHT:
             self.startup()
@@ -167,6 +107,5 @@ class Level1:
 
         self.camera()
         self.all_sprites.draw(surface)
-        # self.ground_group.draw(surface)
-        # self.pipe_group.draw(surface)
-        # self.step_group.draw(surface)
+        self.ground_group.draw(surface)
+        self.pipe_group.draw(surface)

@@ -6,4 +6,3 @@ if __name__ == '__main__':
     control.main()
     pg.quit()
     sys.exit()
-    
